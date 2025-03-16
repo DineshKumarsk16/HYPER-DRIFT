@@ -1,0 +1,154 @@
+/* Reset all styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('services2.jpg') no-repeat center center/cover ;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 5%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Removing Dots from Navigation */
+nav ul {
+    list-style: none; /* Removes dots */
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Items */
+nav ul li {
+    list-style-type: none; /* Extra layer of security */
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Nav Links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.services-hero {
+    background: url('images/services-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    flex-direction: column;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+}
+
+/* Service Cards */
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Icon Style */
+.service-card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Hover Animation */
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>
+        .more-content {
+            display: none; /* Initially hidden */
+            margin-top: 10px; /* Adds space when revealed */
+        }
+        
+        .blog-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .read-more {
+            margin-top: 10px; /* Moves button down when more content appears */
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">HYPER DRIFT</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+                <li><a href="esports.html">Esports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <h2>Latest Blogs</h2>
+        <p>Stay updated with industry trends, insights, and behind-the-scenes stories.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-container">
+        <div class="blog-card">
+            <img src="thefuture.jpg" alt="Blog 1">
+            <h3>The Future of Live Streaming</h3>
+            <p>Streamer & Esports Integration</p>
+            <div class="more-content">
+                <p>More racing esports events with professional streamers participating.</p>
+                <p>Twitch & YouTube partnerships for live-streamed tournaments.</p>
+                <p>Spectator Mode with Commentary for enhanced viewer experience.</p>
+            </div>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <img src="social1.jpg" alt="Blog 2">
+            <h3>Social Media Marketing Trends</h3>
+            <p>Social media marketing for racing mobile games is evolving quickly, with trends focusing on engagement, community building, and innovative content strategies. Here are some key trends shaping the space in 2024:
+            </p>
+            <div class="more-content">
+                <p>1. Short-Form Video Dominance (TikTok, Reels, Shorts)
+                    Gameplay Highlights – High-speed action clips, close finishes, and insane drifts grab attention.
+                    2. Influencer & Esports Collaborations
+                    Partnering with gaming influencers, racing YouTubers, and streamers to showcase gameplay.
+
+                    </p>
+            </div>
+            <button class="read-more">Read More</button>
+        </div>
+
+        <div class="blog-card">
+            <img src="skyline gtr.jpg" alt="Blog 3">
+            <h3>Upcoming Event</h3>
+            <p>Players must prove their drifting skills, reaction time, and strategic upgrades in high-adrenaline matches.
+            </p>
+            <div class="more-content">
+                <p>Winning region gets special car skins and country-themed decals.</p>
+                <p>🏆 Rewards & Incentives</p>
+                <p>🎖 Leaderboard Prizes</p>
+                <p>🥇 1st Place – Exclusive “Turbo King” car + 5,000 in-game currency</p>
+                <p>🥈 2nd-10th Place – Special neon underglow & animated decals</p>
+                <p>🏁 Top 100 Players – Unique “Elite Racer” title + exclusive rims</p>
+                    
+            </div>
+            <button class="read-more">Read More</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hyper Drift. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function () {
+                const moreContent = this.previousElementSibling;
+                if (moreContent.style.display === 'block') {
+                    moreContent.style.display = 'none';
+                    this.textContent = 'Read More';
+                } else {
+                    moreContent.style.display = 'block';
+                    this.textContent = 'Read Less';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
