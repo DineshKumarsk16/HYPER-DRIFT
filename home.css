@@ -47,6 +47,8 @@ body {
     object-fit: cover;
 }
 
+title{
+    background: url('hyper-photoroom.jng') no-repeat center center/cover;
 .overlay {
     position: absolute;
     top: 0;
